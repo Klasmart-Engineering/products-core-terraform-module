@@ -6,11 +6,11 @@ resource "kubernetes_secret" "outputs" {
   }
 
   data = {
-    username                     = var.master_username
-    password                     = random_password.db_password.result
-    hostname                     = module.db_cluster.rds_cluster_endpoint
-    db_port                      = module.db_cluster.rds_cluster_port
-    db_name                      = module.db_cluster.rds_cluster_database_name
+    username = var.master_username
+    password = random_password.db_password.result
+    hostname = module.db_cluster.rds_cluster_endpoint
+    db_port  = module.db_cluster.rds_cluster_port
+    db_name  = module.db_cluster.rds_cluster_database_name
   }
 }
 

@@ -19,7 +19,7 @@ locals {
       OWNER_GROUP     = var.service_owner
       OWNER_SUB_GROUP = var.service_owner
       ENVIRONMENT     = var.project_environment
-      SERVICE_GROUP   = "Subscriptions"
+      SERVICE_GROUP   = "API Products"
     }
   )
 

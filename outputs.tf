@@ -7,7 +7,7 @@ output "db_output_secret" {
 output "db_password" {
   description = "The database master password"
   value       = random_password.db_password.result
-  sensitive = true
+  sensitive   = true
 }
 
 output "db_username" {
