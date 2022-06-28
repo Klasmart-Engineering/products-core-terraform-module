@@ -150,12 +150,6 @@ variable "service_account_microgateway_name" {
   default     = "subscriptions-microgateway"
 }
 
-variable "namespace" {
-  description = "The kubernetes namespace for the product offering"
-  type        = string
-  default     = "subscriptions"
-}
-
 variable "aws_target_role_arn" {
   description = "AWS Provider details, coming from Terraform Variable set"
   type        = string

@@ -2,7 +2,7 @@
 resource "kubernetes_secret" "outputs" {
   metadata {
     name      = "tf-outputs"
-    namespace = var.namespace
+    namespace = local.namespace
   }
 
   data = {

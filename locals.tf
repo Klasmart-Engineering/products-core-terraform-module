@@ -7,11 +7,14 @@ locals {
   dep_account = nonsensitive(data.tfe_outputs.account.values)
   dep_network = nonsensitive(data.tfe_outputs.network.values)
   dep_cluster = nonsensitive(data.tfe_outputs.cluster.values)
+  dep_product = nonsensitive(data.tfe_outputs.common-infrastructure.values)
 
   region              = var.region
   project_environment = var.project_environment
   project_region      = var.project_region
   service_owner       = var.service_owner
+
+  namespace = local.dep_product.product_namespace
 
   tags = merge(
     var.tags,

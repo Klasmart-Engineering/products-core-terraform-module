@@ -17,3 +17,8 @@ data "tfe_outputs" "cluster" {
   organization = local.terraform_organization
   workspace    = "cluster-${local.project_region}-${local.project_environment}"
 }
+
+data "tfe_outputs" "common-infrastructure" {
+  organization = local.terraform_organization
+  workspace    = "products-core-common-infrastructure"
+}
